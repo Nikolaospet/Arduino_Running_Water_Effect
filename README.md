@@ -43,6 +43,7 @@ This Arduino sketch is designed to control a WS2811 LED strip using the FastLED 
 2. Sets the switchTriggered flag.
 3. Records the timestamp of the switch trigger.
 4. Waits for the switch to be released.
+
 **If switchTriggered and 10 seconds have passed:**
 1. Turns off LEDs in pairs starting from LED 171.
 2. Resets the switchTriggered flag.
