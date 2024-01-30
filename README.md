@@ -12,38 +12,40 @@ This Arduino sketch is designed to control a WS2811 LED strip using the FastLED 
 
 ## Global Variables
 
-1. LED_PIN: Specifies the digital pin to which the WS2811 LED strip is connected (pin 6).
-2. SWITCH_PIN: Specifies the digital pin to which the switch is connected (pin 4).
-3. NUM_LEDS: Indicates the number of LEDs in the WS2811 LED strip (171 LEDs).
-4. leds: An array used to store color information for each individual LED.
-5. lastSwitchTime: Records the timestamp of the most recent switch trigger.
-6. onDelay: Determines the delay duration for switching on 2 LEDs at a time (20 milliseconds).
-7. offDelay: Determines the delay duration for switching off 2 LEDs at a time (20 milliseconds).
-8. currentLED: Keeps track of the current LED position.
-9. switchTriggered: A flag indicating whether the switch has been triggered.
+### 1. LED_PIN: Specifies the digital pin to which the WS2811 LED strip is connected (pin 6).
+### 2. SWITCH_PIN: Specifies the digital pin to which the switch is connected (pin 4).
+### 3. NUM_LEDS: Indicates the number of LEDs in the WS2811 LED strip (171 LEDs).
+### 4. leds: An array used to store color information for each individual LED.
+### 5. lastSwitchTime: Records the timestamp of the most recent switch trigger.
+### 6. onDelay: Determines the delay duration for switching on 2 LEDs at a time (20 milliseconds).
+### 7. offDelay: Determines the delay duration for switching off 2 LEDs at a time (20 milliseconds).
+### 8. currentLED: Keeps track of the current LED position.
+### 9. switchTriggered: A flag indicating whether the switch has been triggered.
 
 ## Functions
 
 ### setup()
-Initializes the WS2811 LED strip using the FastLED library.
-Configures the switch pin as an input with a pull-up resistor.
+1. Initializes the WS2811 LED strip using the FastLED library.
+2. Configures the switch pin as an input with a pull-up resistor.
 ### switchOnTwoLEDs()
-Illuminates 2 LEDs at a time with a warm color tone.
-The color tone is represented by the CRGB(255, 180, 100) setting; adjust these values for the desired warmth.
-Delays execution for the specified onDelay duration.
+1. Illuminates 2 LEDs at a time with a warm color tone.
+2. The color tone is represented by the CRGB(255, 180, 100) setting; adjust these values for the desired warmth.
+3. Delays execution for the specified onDelay duration.
 ### switchOffTwoLEDs()
-Turns off 2 LEDs at a time.
-Delays execution for the specified offDelay duration.
+1. Turns off 2 LEDs at a time.
+2. Delays execution for the specified offDelay duration.
 ### loop()
-Monitors the state of the physical switch.
-If the switch is pressed:
-Illuminates LEDs in pairs from 0 to 171.
-Sets the switchTriggered flag.
-Records the timestamp of the switch trigger.
-Waits for the switch to be released.
-If switchTriggered and 10 seconds have passed:
-Turns off LEDs in pairs starting from LED 171.
-Resets the switchTriggered flag.
+
+ **Monitors the state of the physical switch.**
+ 
+**If the switch is pressed:** 
+1. Illuminates LEDs in pairs from 0 to 171.
+2. Sets the switchTriggered flag.
+3. Records the timestamp of the switch trigger.
+4. Waits for the switch to be released.
+**If switchTriggered and 10 seconds have passed:**
+1. Turns off LEDs in pairs starting from LED 171.
+2. Resets the switchTriggered flag.
 
 ## Usage
 
@@ -54,7 +56,6 @@ Resets the switchTriggered flag.
    	
 ## Customization
 
-•	Adjust the RGB values in the CRGB(255, 180, 100) lines to change the warmth of the LED color.
-•	Modify delay values (onDelay and offDelay) for different switching speeds.
-Dependencies
-•	FastLED Library
+1. Adjust the RGB values in the CRGB(255, 180, 100) lines to change the warmth of the LED color.
+2. Modify delay values (onDelay and offDelay) for different switching speeds.
+
