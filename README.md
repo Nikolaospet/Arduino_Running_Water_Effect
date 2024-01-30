@@ -6,21 +6,21 @@ This Arduino sketch is designed to control a WS2811 LED strip using the FastLED 
 
 ## Hardware Setup
 
--	**Arduino Mega 2560 R3**: This serves as the primary microcontroller.
--	**WS2811 LED Strip**: Connected to digital pin 6 on the Arduino Mega.
--	**Switch (Relays will also work)**: Connected to digital pin 4 and GND on the Arduino Mega.
++	**Arduino Mega 2560 R3**: This serves as the primary microcontroller.
++	**WS2811 LED Strip**: Connected to digital pin 6 on the Arduino Mega.
++	**Switch (Relays will also work)**: Connected to digital pin 4 and GND on the Arduino Mega.
 
 ## Global Variables
 
-### - LED_PIN: Specifies the digital pin to which the WS2811 LED strip is connected (pin 6).
-### - SWITCH_PIN: Specifies the digital pin to which the switch is connected (pin 4).
-### - NUM_LEDS: Indicates the number of LEDs in the WS2811 LED strip (171 LEDs).
-### - leds: An array used to store color information for each individual LED.
-### - lastSwitchTime: Records the timestamp of the most recent switch trigger.
-### - onDelay: Determines the delay duration for switching on 2 LEDs at a time (20 milliseconds).
-### - offDelay: Determines the delay duration for switching off 2 LEDs at a time (20 milliseconds).
-### - currentLED: Keeps track of the current LED position.
-### - switchTriggered: A flag indicating whether the switch has been triggered.
++ **LED_PIN:** Specifies the digital pin to which the WS2811 LED strip is connected (pin 6).
++ **SWITCH_PIN:** Specifies the digital pin to which the switch is connected (pin 4).
++ **NUM_LEDS:** Indicates the number of LEDs in the WS2811 LED strip (171 LEDs).
++ **leds:** An array used to store color information for each individual LED.
++ **lastSwitchTime:** Records the timestamp of the most recent switch trigger.
++ **onDelay:** Determines the delay duration for switching on 2 LEDs at a time (20 milliseconds).
++ **offDelay:** Determines the delay duration for switching off 2 LEDs at a time (20 milliseconds).
++ **currentLED:** Keeps track of the current LED position.
++ **switchTriggered:** A flag indicating whether the switch has been triggered.
 
 ## Functions
 
