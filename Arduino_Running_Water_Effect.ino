@@ -2,7 +2,7 @@
 
 #define LED_PIN       6   // Digital pin to which the LED strip is connected
 #define SWITCH_PIN    4   // Digital pin to which the switch is connected
-#define NUM_LEDS      171 // Number of LEDs in your strip
+#define NUM_LEDS      171 // Number of LEDs in the strip
 
 CRGB leds[NUM_LEDS];
 unsigned long lastSwitchTime = 0;
@@ -62,5 +62,5 @@ void loop() {
     switchTriggered = false;
   }
 
-  // You can add additional code here if needed
+  //Additional code can be added here
 }
